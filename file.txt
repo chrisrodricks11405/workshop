@@ -1,2 +1,111 @@
-I am Chris
+dbit@IT6-16:~$ pwd
+/home/dbit
+dbit@IT6-16:~$ ls
+addition.class  blue.c    chris.c    grey       mangeshp9    Pictures   Videos
+addition.java   chris     Desktop    grey.c     mangeshp9.c  Public
+Aditya_40       chris1    Documents  mangesh    Music        snap
+blue            chris1.c  Downloads  mangesh.c  P2.java      Templates
+dbit@IT6-16:~$ git config --global user.name "chris"
+dbit@IT6-16:~$ git config --global user.email "322chris0009@dbit.in"
+dbit@IT6-16:~$ mkdir Chris
+dbit@IT6-16:~$ pwd
+/home/dbit
+dbit@IT6-16:~$ ls
+addition.class  blue.c  chris1.c   Downloads  mangesh.c    P2.java   Templates
+addition.java   chris   chris.c    grey       mangeshp9    Pictures  Videos
+Aditya_40       Chris   Desktop    grey.c     mangeshp9.c  Public
+blue            chris1  Documents  mangesh    Music        snap
+dbit@IT6-16:~$ cd Chris
+dbit@IT6-16:~/Chris$ git init
+Initialized empty Git repository in /home/dbit/Chris/.git/
+dbit@IT6-16:~/Chris$ ls
+dbit@IT6-16:~/Chris$ ls -a
+.  ..  .git
+dbit@IT6-16:~/Chris$ touch file.txt
+dbit@IT6-16:~/Chris$ touch file2.txt
+dbit@IT6-16:~/Chris$ touch file3.txt
+dbit@IT6-16:~/Chris$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file.txt
+	file2.txt
+	file3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+dbit@IT6-16:~/Chris$ git add file.txt
+dbit@IT6-16:~/Chris$ git add file2.txt
+dbit@IT6-16:~/Chris$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   file.txt
+	new file:   file2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file3.txt
+
+dbit@IT6-16:~/Chris$ git add file3
+fatal: pathspec 'file3' did not match any files
+dbit@IT6-16:~/Chris$ git add file3.txt
+dbit@IT6-16:~/Chris$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   file.txt
+	new file:   file2.txt
+	new file:   file3.txt
+
+dbit@IT6-16:~/Chris$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   file.txt
+	new file:   file2.txt
+	new file:   file3.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file.txt
+
+dbit@IT6-16:~/Chris$ git add .
+dbit@IT6-16:~/Chris$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   file.txt
+	new file:   file2.txt
+	new file:   file3.txt
+
+dbit@IT6-16:~/Chris$ git commit -m "added three files"
+[master (root-commit) 4ed3fea] added three files
+ 3 files changed, 2 insertions(+)
+ create mode 100644 file.txt
+ create mode 100644 file2.txt
+ create mode 100644 file3.txt
+dbit@IT6-16:~/Chris$ git log
+commit 4ed3fea8a8e8b974a9e4e43652d2532b9a253772 (HEAD -> master)
+Author: chris <322chris0009@dbit.in>
+Date:   Fri Aug 4 14:54:51 2023 +0530
+
+    added three files
+dbit@IT6-16:~/Chris$ 
+
 
